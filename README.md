@@ -9,7 +9,7 @@ Este código é um exemplo de automação que combina a leitura de arquivos PDF,
 O código utiliza a biblioteca PyPDF2 para ler o conteúdo de um arquivo PDF. A função ler_pdf abre o arquivo, extrai o texto de todas as páginas e retorna o conteúdo como uma string. Essa etapa é essencial para que o conteúdo do PDF possa ser processado posteriormente.
 
 2. Geração de Resumo com Gemini
-O Gemini, um modelo de linguagem generativa da Google, é utilizado para criar um resumo formal do conteúdo do PDF. A função perguntar_ao_gemini envia o texto extraído do PDF para a API do Gemini, junto com uma instrução específica para gerar um e-mail formal. O modelo processa o texto e retorna um resumo estruturado, que começa com "Prezado(a) Mauricio" e termina com "Atenciosamente: SESMT Digital".
+O Gemini, um modelo de linguagem generativa da Google, é utilizado para criar um resumo formal do conteúdo do PDF. A função perguntar_ao_gemini envia o texto extraído do PDF para a API do Gemini, junto com uma instrução específica para gerar um e-mail formal. O modelo processa o texto e retorna um resumo estruturado, que começa com "Prezado(a) ***" e termina com "Atenciosamente: ***".
 
 3. Envio de E-mail com Anexo
 O código utiliza a biblioteca smtplib para enviar o resumo gerado por e-mail. A função enviar_email configura o e-mail com um assunto, corpo e anexa o arquivo PDF original. O e-mail é enviado via servidor SMTP do Gmail, utilizando autenticação com uma senha de aplicativo.
